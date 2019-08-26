@@ -1,12 +1,14 @@
 {
   "name": "chatbot-config",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib",
+  "module": "config",
   "license": "MIT",
   "dependencies": {
+    "@babel/cli": "^7.5.5",
     "convict": "^5.1.0",
     "dotenv": "^8.0.0",
-    "sequelize": "^5.15.0"
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -14,14 +16,24 @@
     "@babel/preset-env": "^7.5.5",
     "babel-eslint": "^10.0.2",
     "commitizen": "^4.0.3",
-    "cz-conventional-changelog": "^3.0.2",
-    "eslint": "^6.1.0",
+    "cz-conventional-changelog": "3.0.2",
+    "eslint": "5",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-compat": "^3.3.0",
     "eslint-plugin-fp": "^2.3.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-sort-imports-es6-autofix": "^0.4.0"
+    "eslint-plugin-sort-imports-es6-autofix": "^0.4.0",
+    "prettier": "^1.18.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "postinstall": "babel config --out-dir lib"
   }
 }
