@@ -1,0 +1,7 @@
+.editorconfig
+.eslintignore
+.eslintrc.js
+.gitattributes
+lib/
+.prettierignore
+.prettierrc
